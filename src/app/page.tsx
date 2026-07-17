@@ -203,8 +203,8 @@ export default function Home() {
               </div>
 
               <div className="space-y-5">
-                <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
-                  Building mobile apps, learning cloud technologies, and solving real-world problems through software.
+                <h1 className="max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                  Software Engineering Student passionate about Flutter, Cloud Computing, and Scalable Software Systems.
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-slate-400 sm:text-xl">
                   Hello! I am Myo Min Min Oo, a Software Engineering student at Mae Fah Luang University. I focus on Flutter, Python, SQL, Linux, cloud fundamentals, and software engineering principles while continuously learning how to build reliable and scalable systems.
@@ -213,16 +213,17 @@ export default function Home() {
 
               <div className="flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="#contact"
+                  href="/mmmoresume.pdf"
+                  download
                   className="inline-flex h-12 items-center justify-center rounded-full bg-cyan-400 px-6 text-sm font-semibold text-slate-950 transition-transform hover:-translate-y-0.5 hover:bg-cyan-300"
                 >
-                  Start a project
+                  Download Resume
                 </a>
                 <a
                   href="#projects"
                   className="inline-flex h-12 items-center justify-center rounded-full border border-slate-600 bg-[color:var(--surface)] px-6 text-sm font-semibold text-white transition-colors hover:border-violet-400/50 hover:bg-[color:var(--surface)]/90"
                 >
-                  View selected work
+                  View Projects
                 </a>
               </div>
             </div>
@@ -245,16 +246,6 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-[1.5rem] border border-slate-700/40 bg-[color:var(--surface-strong)] p-4">
-                  <p className="text-3xl font-semibold text-white">2</p>
-                  <p className="mt-1 text-sm text-slate-400">institutions studied</p>
-                </div>
-                <div className="rounded-[1.5rem] border border-slate-700/40 bg-[color:var(--surface-strong)] p-4">
-                  <p className="text-3xl font-semibold text-white">Flutter</p>
-                  <p className="mt-1 text-sm text-slate-400">core mobile focus</p>
-                </div>
-              </div>
             </aside>
           </section>
 
@@ -379,16 +370,19 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="certifications" className="grid gap-4 py-8 lg:grid-cols-2 lg:py-12">
-            <div>
-              <p className="text-sm uppercase tracking-[0.24em] text-slate-400">Certifications</p>
-              <h2 className="mt-3 max-w-md text-3xl font-semibold text-white sm:text-4xl">
-                Learning across data, deep learning, Python, and Linux.
-              </h2>
+          <section id="certifications" className="py-8 lg:py-12">
+            <div className="flex items-end justify-between gap-6 pb-6">
+              <div>
+                <p className="text-sm uppercase tracking-[0.24em] text-slate-400">Certifications</p>
+                <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
+                  Learning across data, deep learning, Python, and Linux.
+                </h2>
+              </div>
             </div>
-            <div className="grid gap-4">
+
+            <div className="grid gap-4 lg:grid-cols-2">
               {certifications.map((cert) => (
-                <article key={cert.title} className="rounded-[1.5rem] border border-slate-700/40 bg-[color:var(--surface)] p-6">
+                <article key={cert.title} className="rounded-[1.75rem] border border-slate-700/40 bg-[color:var(--surface)] p-6">
                   <p className="text-sm text-cyan-300">{cert.provider}</p>
                   {cert.provider === "The Linux Foundation" ? (
                     <button
@@ -544,12 +538,6 @@ export default function Home() {
                   >
                     GitHub
                   </a>
-                  <a
-                    href="https://linkedin.com/in/yourprofile"
-                    className="inline-flex h-12 items-center justify-center rounded-full border border-slate-600 bg-[color:var(--surface)] px-6 text-sm font-semibold text-white transition-colors hover:border-cyan-400/50 hover:bg-[color:var(--surface)]/90"
-                  >
-                    LinkedIn
-                  </a>
                 </div>
               </div>
             </div>
@@ -557,7 +545,7 @@ export default function Home() {
 
           <footer className="flex flex-col gap-3 border-t border-slate-700/40 py-6 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
             <p>MMMO</p>
-            <p>PORFOLIO</p>
+            <p>PORTFOLIO</p>
           </footer>
         </div>
       </div>
@@ -622,3 +610,4 @@ export default function Home() {
     </main>
   );
 }
+
